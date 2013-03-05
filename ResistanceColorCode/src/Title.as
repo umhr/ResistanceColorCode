@@ -93,7 +93,7 @@ package
 			button.addChild(tf);
 			
 			button.x = int((stage.stageWidth - button.width) * 0.5);
-			button.y = 400;
+			button.y = Main.stageHeight-65;
 			button.useHandCursor = true;
 			button.addEventListener(MouseEvent.CLICK, button_click);
 			addChild(button);

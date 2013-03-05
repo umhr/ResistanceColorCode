@@ -39,11 +39,13 @@ package
 		}
 		private function setRanking():void 
 		{
+			var toX:int = (Main.stageWidth - 225) * 0.5;
+			var toY:int = (Main.stageHeight - 28 * 10) * 0.5;
 			for (var i:int = 0; i < 10; i++) 
 			{
 				_rankList[i] = new Rank(i);
-				_rankList[i].x = 225;
-				_rankList[i].y = 90 + i * 30;
+				_rankList[i].x = Main.stageWidth * 0.5 - 10;
+				_rankList[i].y = toY + i * 28;// 90 + i * 30;
 				addChild(_rankList[i]);
 			}
 			setTotalScore();
@@ -72,19 +74,21 @@ package
 			_totalScore.text = "Total:";
 			_totalScore.mouseEnabled = false;
 			_totalScore.selectable = false;
-			_totalScore.width = 465;
+			_totalScore.width = Main.stageWidth;
 			_totalScore.height = 30;
-			_totalScore.y = 356;
+			_totalScore.y = Main.stageHeight - 100;
 		}
 		
 		public function setResistor():void {
 			var tweenList:Array/*Tween24*/ = [];
 			var score:Number = 0;
+			var toX:int = (Main.stageWidth - 225) * 0.5;
+			var toY:int = (Main.stageHeight - 28 * 10) * 0.5;
 			var n:int = _rankList.length;
 			for (var i:int = 0; i < n; i++) 
 			{
 				_rankList[i].visible = false;
-				tweenList[i] = Tween24.tween(_rankList[i], 0, Ease24._2_QuadInOut).xy(120, 75 + i * 28).visible(true).delay(i * 0.1);
+				tweenList[i] = Tween24.tween(_rankList[i], 0, Ease24._2_QuadInOut).xy(toX, toY + i * 28).visible(true).delay(i * 0.1);
 				_rankList[i].setResistor();
 				score += _rankList[i].score;
 			}

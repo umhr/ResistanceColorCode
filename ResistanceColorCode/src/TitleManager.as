@@ -29,7 +29,7 @@ package
 			// entry point
 			
 			graphics.beginFill(0x333333, 1);
-			graphics.drawRoundRect(0, 0, 465, 465, 8, 8);
+			graphics.drawRoundRect(0, 0, Main.stageWidth, Main.stageHeight, 8, 8);
 			graphics.endFill();
 			
 			addChild(Title.getInstance());

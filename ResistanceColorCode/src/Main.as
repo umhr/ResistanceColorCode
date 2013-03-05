@@ -10,7 +10,8 @@ package
 	[SWF(width = 465, height = 465, backgroundColor = 0x555555, frameRate = 60)]
 	public class Main extends Sprite 
 	{
-		
+		static public var stageWidth:int;
+		static public var stageHeight:int;
 		public function Main():void 
 		{
 			if (stage) init();
@@ -22,8 +23,14 @@ package
 			removeEventListener(Event.ADDED_TO_STAGE, init);
 			// entry point
 			
-			addChild(new Canvas());
+			stageWidth = stage.stageWidth;
+			stageHeight = stage.stageHeight;
 			
+			graphics.beginFill(0x555555);
+			graphics.drawRect(0, 0, stageWidth, stageHeight);
+			graphics.endFill();
+			
+			addChild(new Canvas());
 			
 		}
 		

@@ -32,7 +32,8 @@ package
 			{
 				var questio:Question = new Question();
 				questio.index = i;
-				questio.y = i * 465;
+				questio.y = Main.stageHeight;
+				questio.visible = false;
 				addChild(questio);
 				questioList.push(questio);
 			}

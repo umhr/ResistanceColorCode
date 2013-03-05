@@ -38,7 +38,7 @@ package
 			
 			addChild(_resistor);
 			_resistor.x = (stage.stageWidth - _resistor.width) * 0.5;
-			_resistor.y = 40;
+			_resistor.y = (stage.stageHeight - 385) * 0.5;//40;
 			addChild(_countDownCanvas);
 			addChoice();
 		}
@@ -47,11 +47,11 @@ package
 			_countDownCanvas.graphics.clear();
 			var rgb:int = PreferredNumber.BAND_COLORS[_index];
 			var n:int = count;
+			var h:int = Main.stageHeight - 20;
 			for (var i:int = 0; i < n; i++) 
 			{
-				//_countDownCanvas.graphics.beginFill(PreferredNumber.BAND_COLORS[i]);
 				_countDownCanvas.graphics.beginFill(rgb);
-				_countDownCanvas.graphics.drawCircle(20, 445 - i * 13, 3);
+				_countDownCanvas.graphics.drawCircle(20, h - i * 13, 3);
 				_countDownCanvas.graphics.endFill();
 			}
 			_count = count;
@@ -111,7 +111,7 @@ package
 				_choiceList.push(choice);
 			}
 			_choiceCanvas.x = (stage.stageWidth - _choiceCanvas.width) * 0.5;
-			_choiceCanvas.y = 200;
+			_choiceCanvas.y = (stage.stageHeight - 385) * 0.5 + 160;// 200;
 			addChild(_choiceCanvas);
 		}
 		
@@ -136,9 +136,12 @@ package
 			
 			var rgb:int = PreferredNumber.BAND_COLORS[_index];
 			
+			var w:int = Main.stageWidth;
+			var h:int = Main.stageHeight;
+			
 			graphics.beginFill(rgb, 1);
-			graphics.drawRoundRect(5, 5, 455, 455, 12, 12);
-			graphics.drawRoundRect(10, 10, 445, 445, 8, 8);
+			graphics.drawRoundRect(5, 5, w - 10, h - 10, 12, 12);
+			graphics.drawRoundRect(10, 10, w - 20, h - 20, 8, 8);
 			graphics.endFill();
 			
 			var textFormat:TextFormat = new TextFormat();

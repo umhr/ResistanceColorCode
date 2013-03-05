@@ -31,7 +31,7 @@ package
 		private function setPosition():void 
 		{
 			_titleManager.x = 0;
-			_questionManager.questioList[0].x = 465;
+			_questionManager.questioList[0].x = Main.stageWidth;
 			_questionManager.questioList[0].y = 0;
 		}
 		
@@ -43,13 +43,13 @@ package
 			_titleManager.visible = true;
 			_titleManager.x = 0;
 			_questionManager.questioList[0].visible = true;
-			_questionManager.questioList[0].x = 465;
+			_questionManager.questioList[0].x = Main.stageWidth;
 			_questionManager.questioList[0].y = 0;
 			_floor = 0;
 			isTween = true;
 			
 			Tween24.parallel(
-				Tween24.tween(_titleManager, 0.5, Ease24._2_QuadOut).x( -465).visible(false),
+				Tween24.tween(_titleManager, 0.5, Ease24._2_QuadOut).x( -Main.stageWidth).visible(false),
 				Tween24.tween(_questionManager.questioList[0], 0.5, Ease24._2_QuadOut).x( 0),
 				Tween24.tween(this, 0.5, null, { isTween:false } )
 			).onComplete(startTimer).play();
@@ -100,13 +100,13 @@ package
 		private function backToTitle():void 
 		{
 			_titleManager.visible = true;
-			_titleManager.x = -465;
+			_titleManager.x = -Main.stageWidth;
 			_questionManager.questioList[9].x = 0;
 			isTween = true;
 			
 			Tween24.parallel(
 				Tween24.tween(_titleManager, 0.5, Ease24._2_QuadOut).x( 0),
-				Tween24.tween(_questionManager.questioList[9], 0.5, Ease24._2_QuadOut).x( 465).visible(false),
+				Tween24.tween(_questionManager.questioList[9], 0.5, Ease24._2_QuadOut).x( Main.stageWidth).visible(false),
 				Tween24.tween(this, 0.5, null, { isTween:false } )
 			).onComplete(onComplete).delay(0.5).play();
 			
@@ -126,11 +126,11 @@ package
 			oldTarget.y = 0;
 			newTarget.visible = true;
 			newTarget.x = 0;
-			newTarget.y = 465;
+			newTarget.y = Main.stageHeight;
 			isTween = true;
 			
 			Tween24.parallel(
-				Tween24.tween(oldTarget, 0.5, Ease24._2_QuadOut).y( -465).visible(false),
+				Tween24.tween(oldTarget, 0.5, Ease24._2_QuadOut).y( -Main.stageHeight).visible(false),
 				Tween24.tween(newTarget, 0.5, Ease24._2_QuadOut).y( 0),
 				Tween24.tween(this, 0.5, null, { isTween:false } )
 			).delay(0.5).onComplete(startTimer).play();
