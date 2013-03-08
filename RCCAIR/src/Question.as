@@ -90,6 +90,10 @@ package
 					resisitorData.pow += Math.random() * 3;
 				}
 				
+					//resisitorData.base = e24[0];
+					//resisitorData.torelancePercent = 5;
+					//resisitorData.pow = 4;
+				
 				_choiceList[i].resistorData = resisitorData.clone();
 				
 				if (seikai == i) {
@@ -143,6 +147,12 @@ package
 			var w:int = Main.stageWidth;
 			var h:int = Main.stageHeight;
 			
+			graphics.clear();
+			
+			//graphics.beginFill(Utils.rgbBrightness(rgb, 1.2));
+			//graphics.drawRect(0, 0, Main.stageWidth, Main.stageHeight);
+			//graphics.endFill();
+			//
 			graphics.beginFill(rgb, 1);
 			graphics.drawRoundRect(5, 5, w - 10, h - 10, 12, 12);
 			graphics.drawRoundRect(10, 10, w - 20, h - 20, 8, 8);

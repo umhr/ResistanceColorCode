@@ -35,9 +35,11 @@ package
 			var w:int = stage.stageWidth;
 			var h:int = stage.stageHeight;
 			
-			graphics.beginFill(0x333333, 1);
-			graphics.drawRoundRect(0, 0, w, h, 8, 8);
-			graphics.endFill();
+			addChild(Stripe.getInstance());
+			
+			//graphics.beginFill(0x333333, 1);
+			//graphics.drawRoundRect(0, 0, w, h, 8, 8);
+			//graphics.endFill();
 			
 			var textFormat:TextFormat = new TextFormat();
 			textFormat.size = 48;
@@ -71,17 +73,29 @@ package
 			var textFormat:TextFormat = new TextFormat();
 			textFormat.size = 11;
 			textFormat.align = TextFormatAlign.CENTER;
-			textFormat.color = 0x999999;
+			textFormat.color = 0xFFFFFF;
 			textFormat.font = "_明朝";
 			
 			_copyRights.defaultTextFormat = textFormat;
 			_copyRights.text = "Created by Mizutama Inc. Sound by 音の葉っぱ～効果音・ジングル・BGMのフリー音素材集～";
-			_copyRights.mouseEnabled = false;
+			//_copyRights.mouseEnabled = false;
 			_copyRights.selectable = false;
 			_copyRights.width = Main.stageWidth;
 			_copyRights.height = 14;
 			_copyRights.y = Main.stageHeight - _copyRights.height;
+			_copyRights.addEventListener(MouseEvent.MOUSE_DOWN, copyRights_mouseDown);
 			addChild(_copyRights);
+		}
+		
+		private function copyRights_mouseDown(event:MouseEvent):void 
+		{
+			if (SoundManager.getInstance().isOn) {
+				_copyRights.text = "Created by Mizutama Inc.";
+				SoundManager.getInstance().isOn = false;
+			}else {
+				_copyRights.text = "Created by Mizutama Inc. Sound by 音の葉っぱ～効果音・ジングル・BGMのフリー音素材集～";
+				SoundManager.getInstance().isOn = true;
+			}
 		}
 		
 		private function setStartButton():void 

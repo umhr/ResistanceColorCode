@@ -20,7 +20,7 @@ package
 		}
 		private function init():void 
 		{
-			addRank();
+			//addRank();
 		}
 		private function addRank():void 
 		{
@@ -62,8 +62,8 @@ package
 			var resisterData:ResistorData = question.answerData.clone();
 			var resistor:Resistor = new Resistor();
 			resistor.scaleX = resistor.scaleY = 0.25;
-			resistor.x = 30;
-			resistor.y = -6;
+			resistor.x = 60;
+			resistor.y = 11;
 			resistor.resistorData = resisterData.clone();
 			addChild(resistor);
 			
@@ -89,7 +89,7 @@ package
 			if (!resisterData.isGood) {
 				text = "Mistake!";
 				_score = 0;
-				textFormat.color = 0x666666;
+				textFormat.color = 0xFFFFFF;
 			}
 			
 			var tf:TextField = new TextField();

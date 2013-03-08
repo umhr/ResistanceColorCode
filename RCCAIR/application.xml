@@ -41,11 +41,11 @@
     <systemChrome>standard</systemChrome>
   </initialWindow>
   <icon>
-    <image48x48>icons/RCCAIR48.png</image48x48>
-    <image57x57>icons/RCCAIR57.png</image57x57>
-    <image72x72>icons/RCCAIR72.png</image72x72>
-    <image114x114>icons/RCCAIR114.png</image114x114>
-    <image512x512>icons/RCCAIR512.png</image512x512>
+    <image48x48>icons/ResistanceColorCode48.png</image48x48>
+    <image57x57>icons/ResistanceColorCode57.png</image57x57>
+    <image72x72>icons/ResistanceColorCode72.png</image72x72>
+    <image114x114>icons/ResistanceColorCode114.png</image114x114>
+    <image512x512>icons/ResistanceColorCode512.png</image512x512>
   </icon>
   <!-- 
 	AIR options:

@@ -23,6 +23,7 @@ package
 		static public const SCORE:String = "score";
 		static public const START:String = "start";
 		
+		private var _isOn:Boolean = true;
 		private var _ok:Sound;
 		private var _ng:Sound;
 		private var _next:Sound;
@@ -39,8 +40,22 @@ package
 		}
 		
 		public function play(type:String):void {
-			(this["_" + type] as Sound).play(0);
+			if(_isOn){
+				(this["_" + type] as Sound).play(0);
+			}
 		}
+		
+		public function get isOn():Boolean 
+		{
+			return _isOn;
+		}
+		
+		public function set isOn(value:Boolean):void 
+		{
+			_isOn = value;
+		}
+		
+		
 		
 	}
 	
