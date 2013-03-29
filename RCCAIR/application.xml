@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <application xmlns="http://ns.adobe.com/air/application/3.6">
-  <id>air.RCCAIR</id>
+  <id>jp.mztm.RCC</id>
   <versionNumber>0.1</versionNumber>
   <supportedProfiles>mobileDevice</supportedProfiles>
   <filename>ResistanceColorCode</filename>
@@ -26,7 +26,7 @@
 	<!-- iPhone support -->
 	<string>1</string>
 	<!-- iPad support -->
-	<!--<string>2</string>-->
+	<string>2</string>
 </array>]]></InfoAdditions>
     <requestedDisplayResolution>high</requestedDisplayResolution>
   </iPhone>

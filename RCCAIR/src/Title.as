@@ -32,9 +32,6 @@ package
 			removeEventListener(Event.ADDED_TO_STAGE, onInit);
 			// entry point
 			
-			var w:int = stage.stageWidth;
-			var h:int = stage.stageHeight;
-			
 			addChild(Stripe.getInstance());
 			
 			//graphics.beginFill(0x333333, 1);
@@ -59,7 +56,7 @@ package
 			
 			tf.mouseEnabled = false;
 			tf.selectable = false;
-			tf.width = stage.stageWidth;
+			tf.width = Main.stageWidth;
 			tf.y = 10;
 			addChild(tf);
 			
@@ -126,7 +123,7 @@ package
 			tf.y = 11;
 			button.addChild(tf);
 			
-			button.x = int((stage.stageWidth - button.width) * 0.5);
+			button.x = int((Main.stageWidth - button.width) * 0.5);
 			button.y = Main.stageHeight-120;
 			button.useHandCursor = true;
 			button.addEventListener(MouseEvent.CLICK, button_click);

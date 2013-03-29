@@ -15,10 +15,10 @@ set AND_ICONS=icons/android
 set AND_SIGNING_OPTIONS=-storetype pkcs12 -keystore "%AND_CERT_FILE%" -storepass %AND_CERT_PASS%
 
 :: iOS packaging
-set IOS_DIST_CERT_FILE=
-set IOS_DEV_CERT_FILE=
-set IOS_DEV_CERT_PASS=
-set IOS_PROVISION=cert\RCCAIR.mobileprovision
+set IOS_DIST_CERT_FILE=cert\ios.p12
+set IOS_DEV_CERT_FILE=cert\ios.p12
+set IOS_DEV_CERT_PASS=mztm2208
+set IOS_PROVISION=cert\RCC.mobileprovision
 set IOS_ICONS=icons/ios
 
 set IOS_DEV_SIGNING_OPTIONS=-storetype pkcs12 -keystore "%IOS_DEV_CERT_FILE%" -storepass %IOS_DEV_CERT_PASS% -provisioning-profile %IOS_PROVISION%
@@ -32,7 +32,7 @@ set APP_DIR=bin
 set FILE_OR_DIR=-C %APP_DIR% .
 
 :: Your application ID (must match <id> of Application descriptor)
-set APP_ID=air.RCCAIR
+set APP_ID=jp.mztm.RCC
 
 :: Output packages
 set DIST_PATH=dist

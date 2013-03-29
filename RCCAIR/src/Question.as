@@ -38,8 +38,8 @@ package
 			// entry point
 			
 			addChild(_resistor);
-			_resistor.x = (stage.stageWidth - _resistor.width) * 0.5;
-			_resistor.y = (stage.stageHeight - 385) * 0.5;//40;
+			_resistor.x = (Main.stageWidth - _resistor.width) * 0.5;
+			_resistor.y = (Main.stageHeight - 385) * 0.5;//40;
 			addChild(_countDownCanvas);
 			addChoice();
 			
@@ -118,8 +118,8 @@ package
 				_choiceCanvas.addChild(choice);
 				_choiceList.push(choice);
 			}
-			_choiceCanvas.x = (stage.stageWidth - _choiceCanvas.width) * 0.5;
-			_choiceCanvas.y = (stage.stageHeight - 385) * 0.5 + 160;// 200;
+			_choiceCanvas.x = (Main.stageWidth - _choiceCanvas.width) * 0.5;
+			_choiceCanvas.y = (Main.stageHeight - 385) * 0.5 + 160;// 200;
 			addChild(_choiceCanvas);
 		}
 		
