@@ -17,7 +17,7 @@ set AND_SIGNING_OPTIONS=-storetype pkcs12 -keystore "%AND_CERT_FILE%" -storepass
 :: iOS packaging
 set IOS_DIST_CERT_FILE=cert\ios_distribution.p12
 set IOS_DEV_CERT_FILE=cert\ios_development.p12
-set IOS_DEV_CERT_PASS=mztm2208
+set IOS_DEV_CERT_PASS=
 set IOS_PROVISION=cert\RCC.mobileprovision
 set IOS_ICONS=icons/ios
 
